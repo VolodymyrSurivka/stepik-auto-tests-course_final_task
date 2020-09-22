@@ -16,4 +16,9 @@ class ProductPageLocators:
     PRODUCT_BASKET_NAME = (By.XPATH, "//*[@id='messages']/div[1]/div/strong")
     PRODUCT_PRICE = (By.CSS_SELECTOR, "p.price_color")
     PRODUCT_BASKET_PRICE = (By.XPATH, "//*[@id='messages']/div[3]/div/p[1]/strong")
-    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "p.price_color")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
