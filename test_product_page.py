@@ -2,6 +2,7 @@ from .pages.basket_page import BasketPage
 from .pages.login_page import LoginPage
 from .pages.product_page import ProductPage
 import pytest
+import time
 
 
 @pytest.mark.need_review
@@ -37,7 +38,9 @@ class TestUserAddToBasketFromProductPage():
         page.open()
         page.go_to_login_page()
         login_page = LoginPage(browser, browser.current_url)
-        login_page.register_new_user()
+        email = str(time.time()) + "@fakemail.org"
+        password = "1231231231"
+        login_page.register_new_user(email, password)
         login_page.should_be_authorized_user()
 
     def test_user_cant_see_success_message(self, browser):
