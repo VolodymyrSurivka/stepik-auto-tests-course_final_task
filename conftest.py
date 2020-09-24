@@ -3,13 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 
-# @pytest.fixture(scope="function")
-# def browser():
-#     browser = webdriver.Chrome()
-#     yield browser
-#     browser.quit()
-
-
 def pytest_addoption(parser):
     parser.addoption('--browser_name', action='store', default="chrome",
                      help="Choose browser: chrome or firefox")
